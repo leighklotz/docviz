@@ -1,0 +1,27 @@
+--- Detected Topics and Top Words ---
+Topic #0: Words: sbi, fri, may, from, wed
+------------------------------
+Topic #1: Words: rakuten, from, may, wed, fri
+------------------------------
+Topic #2: Words: amazon, com, wed, may, fri
+------------------------------
+Topic #3: Words: jcb, wed, may, fri, mail
+------------------------------
+Topic #4: Words: apple, may, from, wed, fri
+------------------------------
+Topic #5: Words: sbs, may, wed, from, documentos
+------------------------------
+Topic #6: Words: paypay, may, fri, mail, from
+------------------------------
+Topic #7: Words: matsui, fri, from, may, wed
+------------------------------
+Topic #8: Words: wed, may, fri, from, sun
+------------------------------
+Topic #9: Words: from, mail, may, fri, jcb
+------------------------------
+Topic #10: Words: fri, mon, mail, may, from
+------------------------------
+Topic #11: Words: fri, paypay, may, mail, from
+------------------------------
+Topic #12: Words: mail, wed, may, fri, from
+------------------------------
