@@ -1,0 +1,5 @@
+matplotlib
+pyqt5
+top2vec[sentence_encoders]
+# top2vec[bert]
+umap-learn
