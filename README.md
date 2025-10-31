@@ -1,3 +1,6 @@
+# Output
+![docs/spam_topic_umap_plot.png)(spam_topic_umap_plot)
+
 # install
 ```
 $ for i in $(grep '^From ' caughtspam-20250601 | awk '{print $2}' | sort -u); do cat caughtspam-20250601 | grep "^From $i" > "$i.mbox"; done
@@ -7,4 +10,6 @@ $ pip install -r requirements.txt
 ./run_top2vec.py docs/
 ```
 
-For output see [examples](examples)
+For output see [examples](examples).
+
+
