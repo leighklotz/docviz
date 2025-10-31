@@ -10,6 +10,6 @@ $ pip install -r requirements.txt
 ./run_top2vec.py docs/
 ```
 
-For output see [examples](examples).
+For output see [docs](docs).
 
 
