@@ -1,5 +1,5 @@
 # Output
-![docs/spam_topic_umap_plot.png)(spam_topic_umap_plot)
+![docs/spam_topic_umap_plot.png](docs/spam_topic_umap_plot.png)
 
 # install
 ```
