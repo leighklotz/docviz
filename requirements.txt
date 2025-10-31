@@ -1,5 +1,6 @@
 matplotlib
 pyqt5
-top2vec[sentence_encoders]
+top2vec[sentence_encoders,sentence_transformers]
 # top2vec[bert]
 umap-learn
+torch

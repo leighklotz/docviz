@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import os
+import sys
 import glob
 import umap
 import matplotlib
@@ -13,24 +14,20 @@ def load_documents_from_directory(directory_path):
     """
     Reads all text files from a directory and returns a list of strings.
     """
-    documents = []
-    file_paths = glob.glob(os.path.join(directory_path, '*.txt'))
-    
-    if not file_paths:
-        print(f"No .txt files found in: {directory_path}")
-        return []
-
-    for file_path in file_paths:
-        try:
-            with open(file_path, 'r', encoding='utf-8') as f:
-                content = f.read()
-                documents.append(content)
-        except Exception as e:
-            print(f"Error reading file {file_path}: {e}")
-            continue
-
+    filenames = glob.glob(os.path.join(directory_path, '*'))
+    documents = [process_file(file_path) for file_path in filenames]
     print(f"Successfully loaded {len(documents)} documents.")
     return documents
+
+def process_file(file_path):
+    print(f"{file_path}")
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+            return content
+    except Exception as e:
+        import pdb;pdb.set_trace()
+        raise Exception(f"Error reading file {file_path}", exc_info=True)
 
 def create_and_save_umap_plot(model, output_filename='topic_umap_plot.png'):
     """
@@ -39,7 +36,7 @@ def create_and_save_umap_plot(model, output_filename='topic_umap_plot.png'):
     print(f"\nGenerating UMAP visualization...")
     
     # 1. Get the original high-dimensional document vectors
-    doc_vectors = model._get_document_vectors()
+    doc_vectors = model.document_vectors
     
     # 2. Re-run UMAP to get 2D coordinates for plotting
     # These parameters are a good starting point but can be tuned
@@ -69,12 +66,8 @@ def create_and_save_umap_plot(model, output_filename='topic_umap_plot.png'):
 
 
 # --- Main execution ---
-
-# IMPORTANT: Change this to the path of your directory containing text files
-DOCS_DIR = './your_document_folder' 
-
 if __name__ == "__main__":
-    documents_list = load_documents_from_directory(DOCS_DIR)
+    documents_list = load_documents_from_directory(sys.argv[1])
 
     if documents_list:
         print("\nStarting Top2Vec model training (this may take a while)...")
