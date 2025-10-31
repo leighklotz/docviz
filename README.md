@@ -1,3 +1,5 @@
+Naïve implementation of top2vec clustering using UMAP and HDBSCAN.
+
 # Output
 ![docs/examples/spam_topic_umap_plot.png](docs/examples/spam_topic_umap_plot.png)
 
