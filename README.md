@@ -7,7 +7,7 @@ $ for i in $(grep '^From ' caughtspam-20250601 | awk '{print $2}' | sort -u); do
 $ cd ..
 $ mkvenv
 $ pip install -r requirements.txt
-./run_top2vec.py docs/
+./run_top2vec.py documents/
 ```
 
 For output see [docs](docs).
